@@ -1,0 +1,93 @@
+<div class="jumbotron text-center">
+<style>
+hr.style4 {
+			border-top: 1px dotted #8c8b8b;
+			width: 500px;
+		
+			}
+
+</style>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12">
+			<h2> Personal Information </h2>
+			<hr class="style4">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>Name: {{detail.name}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>Father's Name: {{detail.father_name}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>Mother's Name: {{detail.mother_name}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>Date of birth: {{detail.dob}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>Gender: {{detail.gender}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12" >
+			<p>Permanent Address: {{detail.per_addr}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>Category: {{detail.category}}</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2> Acedemic Information </h2>
+			<hr class="style4">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="table responsive">
+					<table class="table table-hover" style="width: 500px; margin:auto;">
+						<tr><th></th>
+							<th> Institute name </th>
+							<th> Board </th>
+							<th> Passing Year </th>
+							<th> Percentage </th>				
+						</tr>
+						<tr>
+							<th> SSC </th>
+							<td> {{detail.s_i_n}}</td>
+							<td>{{detail.s_board}} </td>
+							<td>{{detail.s_pass_year}}</td>
+							<td>{{detail.s_percentage}}</td>
+
+						</tr>
+						<tr>
+							<th> HSC/Diploma </th>
+							<td>{{detail.h_i_n}}</td>
+							<td>{{detail.h_board}}</td>
+							<td>{{detail.h_pass_year}}</td>
+							<td>{{detail.h_percentage}}</td>
+						</tr>
+					</table>
+					</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>Degree programme: {{detail.degree_prgm}}</p>
+		</div>
+	</div>
+</div>
+</div>

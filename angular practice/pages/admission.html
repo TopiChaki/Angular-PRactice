@@ -1,0 +1,183 @@
+<div style="background-image: url(m4.jpg); background-repeat: no-repeat; background-size: 100% 100%;" class="jumbotron text-center">
+
+			<style>
+			
+			.c1 .form-control, .c1 .md-content{
+				width: 500px;
+				
+				margin: auto;
+			}
+			hr.style4 {
+			border-top: 1px dotted #8c8b8b;
+			width: 500px;
+			}
+			.c2 .form-control{
+				width: 150px;
+				margin: auto;
+			}
+			.c2 th{
+				text-align: center;
+			}
+			table .form-control{
+				width: 150px;
+			}
+			</style>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+			<h1>Admission Page</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+			<p>{{ message }}</p>
+			</div>
+		</div>
+	
+	</div>
+	<form name="myForm" style="display:inline;" ng-submit="send(myForm.$valid)">
+		<div class="form-group required">
+		<div class="c1">
+	
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+			
+		<!----Personal info-->
+			
+			
+			<h2> Personal Information </h2>
+			<hr class="style4">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+			<vname><input type="text" class="form-control" placeholder="Name" id="name" ng-model="name" required></input>
+			<font color="red"><span ng-show="vall === '1'" ng-hide="vall != '1'">Only characters are allowed!</span>
+			<span ng-show="vall === '2'">Too long!</span>
+			<span ng-show="myForm.name.$touched && myForm.name.$invalid">Valid name is required.</span></font></vname>
+			
+			<br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+			<input type="text" class="form-control" placeholder="Father's Name" id="Father's Name" ng-model="father_name"></input><br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+			<input type="text" class="form-control" placeholder="Mother's Name" id="Mother's Name" ng-model="mother_name"></input><br>
+			</div>
+		</div>
+		
+		<div class="row">		
+				<div class="col-sm-12">
+							<!--<input type="text" id="dp1" class="span2" placeholder="Date of birth" name="dob" ng-model="dob" required></input>
+							<span ng-show="myForm.dob.$touched && myForm.dob.$invalid"><font color="red">The date of birth is required.</font></span><br>
+				-->
+				
+					<md-content class="datepickerdemoBasicUsage" style="background: transparent;">
+						
+							
+							 
+							  <md-datepicker ng-model="myDate" md-placeholder="Date of birth" md-open-on-focus=""></md-datepicker>
+							
+					</md-content>
+				
+    </div>
+				</div>
+							
+		
+		
+		<div class="row">
+			<div class="col-sm-12">
+			<label style="margin: 20px 0;" > Gender: </label>			
+			<label class="radio-inline" style="margin: 0 20px;"><input type="radio" name="gender" ng-model="gender" ng-value="'Female'">Female</label>
+			<label class="radio-inline" style="margin: 0 20px;"><input type="radio" name="gender" ng-model="gender" ng-value="'Male'">Male</label>
+			</div><br>
+		</div>	
+		<div class="row">
+			<div class="col-sm-12">
+			<textarea class="form-control" placeholder="Permanent Address" name="per_addr" ng-model="per_addr" required></textarea>
+			<span ng-show="myForm.per_addr.$touched && myForm.per_addr.$invalid"><font color="red">The permanent address is required.</font></span><br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+			<select class="form-control" name="sel1" ng-model="category" ng-init="category=''" required>
+			<option selected value="">--select category--</option>
+			<option ng-value="'General'">General</option>
+			<option ng-value="'SEBC'">SEBC</option>
+			<option ng-value="'SC/ST'">SC/ST</option>
+			</select>
+			<span ng-show="category=='' && myForm.sel1.$touched"><font color="red">Proper category selection is required.</font></span><br>
+			<br>
+			</div> 
+			</div>
+		</div>
+	</div>
+			<div class="c2">
+	<div class="container-fluid">
+		<!----Personal info-->
+			<div class="row">
+				<div class="col-sm-12">
+				<h2> Acedemic Information </h2>
+				<hr class="style4">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+				<div class="table responsive">
+					<table class="table table-hover" style="width: 500px; margin: auto;">
+						<tr><th></th>
+							<th> Institute name </th>
+							<th> Board </th>
+							<th> Passing Year </th>
+							<th> Percentage </th>				
+						</tr>
+						<tr>
+							<th> SSC </th>
+							<td> <input type="text" class="form-control" placeholder="Institute Name" id="institute_name" ng-model="s_institute_name" required></input> </td>
+							<td> <input type="text" class="form-control" placeholder="Board" id="board" ng-model="s_board" required></input> </td>
+							<td> <input type="text" class="form-control" placeholder="Passing year" id="passing_year" ng-model="s_passing_year" required></input> </td>
+							<td> <input type="number" class="form-control" min="0" max="100" placeholder="Percentage" ng-model="s_percentage" required></input> </td>
+
+						</tr>
+						<tr>
+							<th> HSC/Diploma </th>
+							<td> <input type="text" class="form-control" placeholder="Institute Name" id="institute_name" ng-model="h_institute_name" required></input> </td>
+							<td> <input type="text" class="form-control" placeholder="Board" id="board" ng-model="h_board" required></input> </td>
+							<td> <input type="text" class="form-control" placeholder="Passing year" id="passing_year" ng-model="h_passing_year" required></input> </td>
+							<td> <input type="number" class="form-control" min="0" max="100" placeholder="Percentage" ng-model="h_percentage" required></input> </td>
+						</tr>
+					</table>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+				<select class="form-control" name="sel2" style="width:500px;" ng-model="programme" ng-init="programme=''" required>
+				<option selected disabled value="">--select degree programme--</option>
+				<option ng-value="'B.Tech.'">B.Tech.</option>
+				<option ng-value="'B.Farm.'">B.Pharm.</option>
+				<option ng-value="'B.Sc.'">B.Sc.</option>
+				</select>
+				<span ng-show="programme=='' && myForm.sel2.$touched"><font color="red">Proper degree selection is required.</font></span><br>
+				<br>
+				</div><br><br><br>
+			</div>
+			<div class="row">
+			<div class="col-sm-12">
+
+		<button type="submit"  class="button" style="width:150px;" ng-click="send()">Submit</button><!-- ng-disabled="myForm.$invalid || programme=='' || category==''"-->
+		</div>
+		</div>
+				</div>
+	</div>	
+		
+	</div>
+	</form>
+	
+</div>

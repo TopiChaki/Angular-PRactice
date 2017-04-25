@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="some" ng-controller="mainController">
+<head>
+<title>{{Page.title()}}</title>
+<link rel="icon" type="image" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.2/angular-material.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="myangular.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.2/angular-material.css" rel="stylesheet">
+<link href="https://material.angularjs.org/1.1.2/docs.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet" type="text/css">
+
+<style>
+body {
+	background-image: url(m4.jpg);
+	background-repeat: no-repeat; 
+	  background-size: cover;
+}
+</style>
+</head>
+<body >
+<div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+   
+      <a class="navbar-brand" href="/">Some University's Site</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#admission">Admission</a></li>
+        <li><a href="#feedback">Feedback</a></li> 
+        <li ng-show="show_show"><a href="#show">Show</a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+ <div>
+<div ng-view></div>
+</div>
+
+</div>
+</body>
+</html>
