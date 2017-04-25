@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+	document.getElementById("myButton").onclick = show() {
+        location.href = "demo.html";
+</script>
+<style>
+.cls
+{
+	height:10px;
+}
+</style>
+</head>
+<body>
+
+<center>
+<div>
+  <div>
+  <h1>Radio Buttons and Checkboxes</h1>
+  </div>
+	
+  <span class="ui-content">
+    <form action="demo.html" id=form1 method=post name=form1>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>Choose your Ticket:</legend>
+	  
+        <label for="male">£50</label>
+        <input type="radio" name="gender" id="male" class="gender" value="£50.00" >
+        <label for="female">£100</label>
+        <input type="radio" name="gender" id="female" class="gender" value="£100.00">
+      	<label for="other">£150</label>
+        <input type="radio" name="gender" id="other" class="gender" value="£150.00">
+		<br><br><br>
+		<input class="cls" type="text" name="textbox" id="txtbx" value="£">
+      </fieldset>
+      <input type="submit" data-inline="true" value="Submit" id="myButton" onclick="show()">
+    </form>
+  </span>
+</div>
+</center> 
+</body>
+</html>
+
+
+<script>
+		$('.gender').change(function(e){
+			var selectedValue = $(this).val();
+			$('#txtbx').val(selectedValue)
+		});
+</script>
