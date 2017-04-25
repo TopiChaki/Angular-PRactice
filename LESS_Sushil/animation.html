@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#a,#b,#c,#d {
+	margin-left :500px;
+	margin-top :200px;
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+   
+}
+
+#a {
+   animation: move1 3s infinite;
+   animation-timing-function: ease-in-out;
+}
+
+#b {
+    animation: move2 3s infinite;
+    animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+#c {
+	
+    animation: move3 3s infinite;
+	animation-timing-function: ease-in-out;
+}
+#d {
+	animation: move4 3s infinite;
+    animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes move1 {
+    0%   {background: red; left: 0px; top: 0px;}
+    25%  {background: yellow; left: 200px; top: 0px;}
+    50%  {background: blue; left: 200px; top: 200px;}
+    75%  {background: green; left: 0px; top: 200px;}
+    100% {background: red; left: 0px; top: 0px;}
+}
+@keyframes move2 {
+    0%   {background: red; left: 200px; top: 0px;}
+    25%  {background: yellow; left: 200px; top: 200px;}
+    50%  {background: blue; left: 0px; top: 200px;}
+    75%  {background: green; left: 0px; top: 0px;}
+    100% {background: red; left: 200px; top: 0px;}
+}
+@keyframes move3 {
+    0%   {background: red; left: 200px; top: 200px;}
+    25%  {background: yellow; left: 0px; top: 200px;}
+    50%  {background: blue; left: 0px; top: 0px;}
+    75%  {background: green; left: 200px; top: 0px;}
+    100% {background: red; left: 200px; top: 200px;}
+}
+@keyframes move4 {
+    0%   {background: red; left: 0px; top: 200px;}
+    25%  {background: yellow; left: 0px; top: 0px;}
+    50%  {background: blue; left: 200px; top: 0px;}
+    75%  {background: green; left: 200px; top: 200px;}
+    100% {background: red; left: 0px; top: 200px;}
+}
+</style>
+</head>
+<body>
+
+<div id="a"></div>
+<div id="b"></div>
+<div id="c"></div>
+<div id="d"></div>
+
+
+</body>
+</html>
